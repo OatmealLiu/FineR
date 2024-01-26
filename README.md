@@ -18,7 +18,7 @@
     <a href="https://scholar.google.ca/citations?user=xf1T870AAAAJ&hl=en"><strong>Elisa Ricci</strong></a>
   </p>
   <h2 align="center">ICLR 2024</h2>
-  <h3 align="center"><a href="https://openreview.net/forum?id=c7DND1iIgb">Paper</a> | <a href="https://projfiner.github.io/">Project Page</a></h3>
+  <h3 align="center"><a href="https://arxiv.org/abs/2401.13837">Paper</a> | <a href="https://projfiner.github.io/">Project Page</a></h3>
   <h3 align="center">👾 Code is coming soon! Stay tuned! 👾</h3>
 <div align="center"></div>
 <p align="center">
