@@ -1,0 +1,76 @@
+# model dir
+third_party/detectron2
+configs-experimental
+experiments
+#./models
+
+# output dir
+index.html
+data/*
+#slurm/
+#slurm
+slurm-output
+slurm-output/
+slurm-output*
+slurm-output*/
+
+
+.idea
+.idea/
+.idea*
+.idea*/
+
+output
+instant_test_output
+inference_test_output
+samples
+samples/
+
+*.diff
+#*.jpg
+!/projects/DensePose/doc/images/*.jpg
+
+# compilation and distribution
+__pycache__
+_ext
+*.pyc
+*.pyd
+*.so
+*.dll
+*.egg-info/
+build/
+dist/
+wheels/
+
+# pytorch/python/numpy formats
+*.pth
+*.pkl
+*.ts
+model_ts*.txt
+*.zip
+
+# ipython/jupyter notebooks
+*.ipynb
+**/.ipynb_checkpoints/
+
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
+
+# editor settings
+.idea
+.vscode
+_darcs
+
+# project dirs
+/detectron2/model_zoo/configs
+
+/datasets/*
+!/datasets/*.*
+!/datasets/metadata*
+!/datasets/metadata_*
+
+#/models
+/snippet
