@@ -31,7 +31,7 @@
 
 
 ## News 📣:
-- [02/29/2024] Eval. code released!
+- [02/29/2024] We released the code along with the intermediate results (in `experiments/`, including: super-class, attributes, attribute-description pairs, LLM-prompts, LLM raw answers, parsed LLM answers).
 - [01/15/2024] Our work is accepted to <a href="https://iclr.cc/Conferences/2024"><strong>ICLR 2024</strong></a> 🌼! Code is coming soon. See you in Vienna this May!
 
 
