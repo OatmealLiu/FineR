@@ -1,6 +1,5 @@
 import torch
 from transformers import Blip2Processor, Blip2ForConditionalGeneration
-from .bot_toolbox import get_chat_log
 
 
 BLIP2ZOO = {
@@ -17,6 +16,27 @@ ANSWER_INSTRUCTION = 'Answer given questions. If you are not sure about the answ
                      'know honestly. Don\'t imagine any contents that are not in the image.'
 
 SUB_ANSWER_INSTRUCTION = 'Answer: '  # template following blip2 huggingface demo
+
+
+def get_chat_log(questions, answers, last_n=-1):
+    n_addition_q = len(questions) - len(answers)
+    assert (n_addition_q) in [0, 1]
+    template = 'Question: {} \nAnswer: {} \n'
+    chat_log = ''
+    if last_n > 0:
+        answers = answers[-last_n:]
+        questions = questions[-(last_n + n_addition_q):]
+    elif last_n == 0:
+        answers = []
+        questions = questions[-1:] if n_addition_q else []
+
+    for i in range(len(answers)):
+        chat_log = chat_log + template.format(questions[i], answers[i])
+    if n_addition_q:
+        chat_log = chat_log + 'Question: {}'.format(questions[-1])
+    else:
+        chat_log = chat_log[:-2]
+    return chat_log
 
 
 def trim_answer(answer):
