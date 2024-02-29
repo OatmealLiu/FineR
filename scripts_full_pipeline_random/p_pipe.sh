@@ -10,7 +10,7 @@ PYTHON_CMD_EVAL="python -W ignore grouping.py --config_file_env $ENV_CONFIG_PATH
 run_cmds() {
     local num_categories=$1
     $PYTHON_CMD_DISCOVERY --mode describe --num_per_category ${num_categories}
-    $PYTHON_CMD_DISCOVERY --mode guess --num_per_category ${num_categories}
+    $PYTHON_CMD_DISCOVERY --mode reason --num_per_category ${num_categories}
     $PYTHON_CMD_DISCOVERY --mode postprocess --num_per_category ${num_categories}
     $PYTHON_CMD_EVAL --alpha 0.7 --N_tta 10 --num_per_category ${num_categories} --num_runs 10
 }
