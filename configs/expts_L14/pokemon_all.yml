@@ -1,0 +1,47 @@
+# setup expt1
+setup: ours
+experiment: 5.0
+
+# Dataset
+dataset_name: pokemon
+num_classes: 10
+num_base: 5
+num_novel: 5
+
+# Training
+seed: 1
+batch_size: 256
+
+# Text-clustering Method
+#clustering_method: nan
+#clustering_method: clip_voting
+clustering_method: multi_clip_voting
+#clustering_method: kmeans
+#clustering_method: spectral
+#clustering_method: dbscan
+#clustering_method: aggl_unknownK
+#clustering_method: aggl_knownK
+
+# Model
+# VLMs
+#   |- size: options = ['RN50', 'RN101', 'RN50x4', 'RN50x16', 'RN50x64',
+#                       'ViT-B/32', 'ViT-B/16', 'ViT-L/14', 'ViT-L/14@336px']
+#model_size: ViT-B/32
+#model_size: ViT-B/16
+model_size: ViT-L/14
+#model_size: ViT-L/14@336px
+
+# VQAs
+#   |- size: options = ['FlanT5-XXL', 'FlanT5-XL-COCO', 'FlanT5-XL', 'OPT6.7B-COCO',
+#                       'OPT2.7B-COCO', 'OPT6.7B', 'OPT2.7B',
+model_size_vqa: FlanT5-XXL
+#model_size_vqa: OPT6.7B-COCO
+
+# LLMs
+model_type_llm: gpt-3.5-turbo
+
+image_size: 224
+# ['RN50@224px', 'RN101@224px', 'RN50x4@288px', 'RN50x16@384px', 'RN50x64@448px',
+#  'ViT-B/32@224px', 'ViT-B/16@224px', 'ViT-L/14@224px', 'ViT-L/14@336px']
+
+verbose: False

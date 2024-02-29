@@ -18,8 +18,7 @@
     <a href="https://scholar.google.ca/citations?user=xf1T870AAAAJ&hl=en"><strong>Elisa Ricci</strong></a>
   </p>
   <h2 align="center">ICLR 2024</h2>
-  <h3 align="center"><a href="https://arxiv.org/abs/2401.13837">Paper</a> | <a href="https://projfiner.github.io/">Project Page</a></h3>
-  <h3 align="center">👾 Code is coming soon! Stay tuned! 👾</h3>
+  <h3 align="center"><a href="https://openreview.net/forum?id=c7DND1iIgb">OpenReview</a> | <a href="https://arxiv.org/abs/2401.13837">Paper</a> | <a href="https://projfiner.github.io/">Project Page</a></h3>
 <div align="center"></div>
 <p align="center">
   <p>
@@ -32,4 +31,18 @@
 
 
 ## News 📣:
+- [02/29/2024] Code released!
 - [01/15/2024] Our work is accepted to <a href="https://iclr.cc/Conferences/2024"><strong>ICLR 2024</strong></a> 🌼! Code is coming soon. See you in Vienna this May!
+
+
+## Citation
+```
+@inproceedings{
+    liu2024democratizing,
+    title={Democratizing Fine-grained Visual Recognition with Large Language Models},
+    author={Mingxuan Liu and Subhankar Roy and Wenjing Li and Zhun Zhong and Nicu Sebe and Elisa Ricci},
+    booktitle={The Twelfth International Conference on Learning Representations},
+    year={2024},
+    url={https://openreview.net/forum?id=c7DND1iIgb}
+}
+```

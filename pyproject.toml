@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finer"
+version = "1.0.0.post1"
+description = "Democratizing Fine-grained Visual Recognition with Large Language Models"
+readme = "README.md"
+requires-python = ">=3.9.16"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = [
+    "torch==2.1.0", "torchvision==0.16.0", "torchmetrics==0.11.4",
+    "openai", "ftfy", "regex", "tqdm", "nltk", "tenacity==8.2.2", "termcolor==2.3.0", "easydict",
+    "transformers==4.27.4", "tokenizers==0.13.2", "sentence-transformers==2.2.2",
+    "numpy", "scikit-learn==1.2.2", "scipy==1.10.1", "seaborn==0.13.0", "wget",
+    "gdown", "accelerate==0.16.0", "arrow==1.2.3", "argparse==1.4.0", "pandas==2.0.2", "pathtools==0.1.2",
+    "bitsandbytes==0.37.0", "beautifulsoup4==4.12.2", "datasets==2.13.1", "pyarrow==12.0.1",
+    "sentencepiece==0.1.99",
+    "click", "Pillow",
+    "faiss-gpu", "faiss-cpu", "huggingface-hub==0.12.1", "matplotlib==3.7.0",
+    "salesforce-lavis",
+]
+
+[project.optional-dependencies]
+train = ["deepspeed==0.12.6", "ninja", "wandb"]
+build = ["build", "twine"]
+
+[project.urls]
+"Homepage" = "https://projfiner.github.io/"
+"Bug Tracker" = "https://github.com/OatmealLiu/FineR/issues"
+
+[tool.setuptools.packages.find]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*"]
+
+[tool.wheel]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*"]
