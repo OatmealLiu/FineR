@@ -31,7 +31,7 @@
 
 
 ## News 📣:
-- [02/29/2024] Code released!
+- [02/29/2024] Eval. code released!
 - [01/15/2024] Our work is accepted to <a href="https://iclr.cc/Conferences/2024"><strong>ICLR 2024</strong></a> 🌼! Code is coming soon. See you in Vienna this May!
 
 
