@@ -22,7 +22,7 @@ dependencies = [
     "sentencepiece==0.1.99",
     "click", "Pillow",
     "faiss-gpu", "faiss-cpu", "huggingface-hub==0.12.1", "matplotlib==3.7.0",
-    "salesforce-lavis",
+    "salesforce-lavis", "gpustat",
 ]
 
 [project.optional-dependencies]

@@ -1,0 +1,6 @@
+{
+    "superclass": [
+        "dog",
+        "cat"
+    ]
+}

@@ -35,7 +35,7 @@ model_size: ViT-B/16
 #   |- size: options = ['FlanT5-XXL', 'FlanT5-XL-COCO', 'FlanT5-XL', 'OPT6.7B-COCO',
 #                       'OPT2.7B-COCO', 'OPT6.7B', 'OPT2.7B',
 model_size_vqa: FlanT5-XXL
-#model_size_vqa: OPT6.7B-COCO
+#model_size_vqa: OPT2.7B
 
 # LLMs
 model_type_llm: gpt-3.5-turbo
