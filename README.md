@@ -31,7 +31,7 @@
 
 
 ## 📣 News:
-- [02/29/2024] We released the code along with the intermediate results (in `experiments/`, including: super-class, attributes, attribute-description pairs, LLM-prompts, LLM raw answers, parsed LLM answers). User instructions coming later.
+- [03/01/2024] We released the code along with the intermediate results (in `experiments/`, including: super-class, attributes, attribute-description pairs, LLM-prompts, LLM raw answers, parsed LLM answers).
 - [01/15/2024] Our work is accepted to <a href="https://iclr.cc/Conferences/2024"><strong>ICLR 2024</strong></a> 🌼! Code is coming soon. See you in Vienna this May!
 
 
@@ -42,7 +42,6 @@ Requirements:
 - OpenAI API (optional, if you want to discover semantic concepts using LMMs)
 
 1. Clone this repository adn move to the project working directory:
-2. 
 ```shell
 git clone https://github.com/OatmealLiu/FineR.git
 cd FineR
@@ -107,7 +106,7 @@ via softlinks (`ln -s`):
 cd FineR/datasets
 sh link_local_sets.sh YOUR_DATASETS_DOWNLOAD_FOLDER
 ```
-after which, the directory will look like and we are ready to go:
+after which, the directory will look like the following and we are ready to go:
 ```
 FineR
     └── datasets
@@ -141,9 +140,8 @@ sh scripts_eval/p_pipe.sh
 sh scripts_eval/poke_pipe.sh
 ```
 
-For the experiments using **random (long-tailed) images per class for discovery** (paper Tab. 2),, we can run them all via 
-`sh batch_launcher_eval_random` 
-or one-by-one:
+For the experiments using **random (long-tailed) images per class for discovery** (paper Tab. 2), we can run them all via 
+`sh batch_launcher_eval_random` or one-by-one:
 ```shell
 # Bird-200
 sh scripts_eval_random/b_pipe.sh
@@ -156,8 +154,84 @@ sh scripts_eval_random/f_pipe.sh
 # Pet-37
 sh scripts_eval_random/p_pipe.sh
 ```
+In addtion, we also provide intermediate results of using 1 to 10 images per category for discovery in `experiments` 
+folder which we used for sensitivity analysis. If you want to run experiments with them, you can simply replace the 
+``--num_per_category`` argument with 1 to 10 in the scripts.
 
-## Citation
+## ⛓️ Full Pipeline
+To run the full pipeline to discover semantic concepts from few image as observations for the experiments using 
+**3 images per class for discovery**, we can run them all via `sh batch_launcher_fullpipe.sh` or one-by-one:
+```shell
+# Bird-200
+sh scripts_full_pipeline/b_pipe.sh
+# Car-196
+sh scripts_full_pipeline/c_pipe.sh
+# Dog-120
+sh scripts_full_pipeline/d_pipe.sh
+# Flower-102
+sh scripts_full_pipeline/f_pipe.sh
+# Pet-37
+sh scripts_full_pipeline/p_pipe.sh
+# Pokemon
+sh scripts_full_pipeline/poke_pipe.sh
+```
+
+To run the full pipeline to discover semantic concepts from few image as observations for the experiments using 
+**random (long-tailed)  images per class for discovery**, we can run them all via `sh batch_launcher_fullpipe_random.sh`
+or one-by-one:
+```shell
+# Bird-200
+sh scripts_full_pipeline_random/b_pipe.sh
+# Car-196
+sh scripts_full_pipeline_random/c_pipe.sh
+# Dog-120
+sh scripts_full_pipeline_random/d_pipe.sh
+# Flower-102
+sh scripts_full_pipeline_random/f_pipe.sh
+# Pet-37
+sh scripts_full_pipeline_random/p_pipe.sh
+# Pokemon
+sh scripts_full_pipeline_random/poke_pipe.sh
+```
+
+Again, to run experiments with different number of image observations, you can simply replace the ``--num_per_category`` 
+argument with 1 to 10 in the scripts.
+
+Besides, to identify the super-category of the datasets and acquiring useful attributes for VQA-VLMs to describe the 
+images, we can do the following multiple rounds to get the attributes from 3 images observations:
+```shell
+# To do them all together
+sh batch_launcher_IdentifyAndHowto.sh
+# Bird-200
+sh scripts_IdentifyAndHowto/b_pipe.sh
+# Car-196
+sh scripts_IdentifyAndHowto/c_pipe.sh
+# Dog-120
+sh scripts_IdentifyAndHowto/d_pipe.sh
+# Flower-102
+sh scripts_IdentifyAndHowto/f_pipe.sh
+# Pet-37
+sh scripts_IdentifyAndHowto/p_pipe.sh
+# Pokemon
+sh scripts_IdentifyAndHowto/poke_pipe.sh
+```
+or random amount of observations:
+```shell
+# To do them all together
+sh batch_launcher_IdentifyAndHowto_random.sh
+# Bird-200
+sh scripts_IdentifyAndHowto_random/b_pipe.sh
+# Car-196
+sh scripts_IdentifyAndHowto_random/c_pipe.sh
+# Dog-120
+sh scripts_IdentifyAndHowto_random/d_pipe.sh
+# Flower-102
+sh scripts_IdentifyAndHowto_random/f_pipe.sh
+# Pet-37
+sh scripts_IdentifyAndHowto_random/p_pipe.sh
+```
+
+## 🗻 Citation
 ```bibtex
 @inproceedings{
     liu2024democratizing,
