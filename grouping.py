@@ -274,10 +274,6 @@ if __name__ == "__main__":
                         type=str,
                         default='./configs/expts/bird200_all.yml',
                         help='location of host experiment related config file')
-    parser.add_argument('--visualize',
-                        type=bool,
-                        default=False,
-                        help='whether visualize the results')
     # Hyper-parameters
     parser.add_argument('--alpha',
                         type=float,
