@@ -232,6 +232,7 @@ sh scripts_IdentifyAndHowto_random/p_pipe.sh
 ```
 
 ## 🗻 Citation
+Should you find our paper valuable to your work, we would greatly appreciate it if you could cite it:
 ```bibtex
 @inproceedings{
     liu2024democratizing,
