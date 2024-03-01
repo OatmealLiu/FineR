@@ -272,7 +272,7 @@ if __name__ == "__main__":
                         help='location of host environment related config file')
     parser.add_argument('--config_file_expt',
                         type=str,
-                        default='./configs/ours/ours_expt_5.yml',
+                        default='./configs/expts/bird200_all.yml',
                         help='location of host experiment related config file')
     parser.add_argument('--visualize',
                         type=bool,

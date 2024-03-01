@@ -260,11 +260,11 @@ if __name__ == "__main__":
                         help='operating mode for each stage')
     parser.add_argument('--config_file_env',
                         type=str,
-                        default='./configs/env_bravo.yml',
+                        default='./configs/env_machine.yml',
                         help='location of host environment related config file')
     parser.add_argument('--config_file_expt',
                         type=str,
-                        default='./configs/expts/bird.yml',
+                        default='./configs/expts/bird200_all.yml',
                         help='location of host experiment related config file')
     # arguments for control experiments
     parser.add_argument('--num_per_category',
