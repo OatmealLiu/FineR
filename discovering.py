@@ -268,8 +268,10 @@ if __name__ == "__main__":
                         help='location of host experiment related config file')
     # arguments for control experiments
     parser.add_argument('--num_per_category',
-                        type=int,
-                        default=3)
+                        type=str,
+                        default='3',
+                        choices=['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'random'],
+                        )
 
 
     args = parser.parse_args()
